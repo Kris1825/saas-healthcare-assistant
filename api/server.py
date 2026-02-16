@@ -23,6 +23,7 @@ app.add_middleware(
 clerk_config = ClerkConfig(jwks_url=os.getenv("CLERK_JWKS_URL"))
 clerk_guard = ClerkHTTPBearer(clerk_config)
 
+# Define the data models
 class Visit(BaseModel):
     patient_name: str
     date_of_visit: str
